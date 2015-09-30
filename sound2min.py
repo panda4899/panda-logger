@@ -70,8 +70,8 @@ while True:
         #count = count + 1
         #time.sleep(0.5)
 
-    # If the current minute divided by 10 has no remainder
-    # then it's 10 minutes
+    # If the current minute divided by 2 has no remainder
+    # then it's 2 minutes
     # Forgive me for this
     elif (int(strftime("%M")) % 2 is 0 and avgdone is 0):
         try:
@@ -79,17 +79,17 @@ while True:
             print "Two Minute Average:", twominavg
         except ZeroDivisionError:
             pass
-#        tenminavg = round(voltavg, 6)
-#        print "Ten-Minute Average:", tenminavg
-#        tenfile = open('sound_test2_log.csv', 'a')
-#        tenfile.write(strftime("%m-%d-%y %H:%M"))  # time
-#        tenfile.write(",")
-#        tenfile.write(str(tenminavg))
-#        tenfile.write("\n")
-#        tenfile.close()
+#        twominavg = round(voltavg, 6)
+#        print "two-Minute Average:", twominavg
+#        twofile = open('sound_test2_log.csv', 'a')
+#        twofile.write(strftime("%m-%d-%y %H:%M"))  # time
+#        twofile.write(",")
+#        twofile.write(str(twominavg))
+#        twofile.write("\n")
+#        twofile.close()
         levels = []
         maxlevels = []
-        # avgdone is so it only records the 10 minute avgerage once
+        # avgdone is so it only records the 2 minute avgerage once
         avgdone = 1
 
     else:
